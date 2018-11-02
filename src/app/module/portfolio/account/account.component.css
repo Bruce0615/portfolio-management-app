@@ -1,0 +1,58 @@
+.account-container{
+    margin: auto;
+}
+
+.pagestats {    
+    list-style-type: none;
+    position: relative;
+    right: 50px;
+    bottom: 20px;
+}
+
+.pagestats >.calendar{
+    padding: 0 10px;
+} 
+.calendar {
+    margin: 20px;
+    width: 150px;
+    height: 100%;
+    -moz-border-radius: 24px;
+    -webkit-border-radius: 24px;
+    border-radius: 24px;
+    position: relative;
+    background: #FFF;
+    padding: 0px;
+}
+
+.header {
+    background: #337ab7;
+    -webkit-border-top-right-radius: 24px;
+    -moz-border-radius-topright: 24px;
+    border-top-right-radius: 24px;
+    -webkit-border-top-left-radius: 24px;
+    -moz-border-radius-topleft: 24px;
+    border-top-left-radius: 24px;
+    width: 100%;
+    padding: 15px 0px;
+    text-align: center;
+    font-size: 100%;    
+    line-height: 50%;
+}
+
+.num-day {
+    font-size: 100%;
+    font-weight:bold;
+    color: #333;
+    text-align: center;
+    padding: 15px 0px;
+    width: 100%;
+
+    -webkit-border-bottom-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    -webkit-border-bottom-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+    border-color: #337ab7 !important;
+}

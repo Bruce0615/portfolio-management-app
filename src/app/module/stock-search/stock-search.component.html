@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-md-11">
+      <div class="input-group">
+        <input type="search" class="form-control" [(ngModel)]="searchText" placeholder="Enter stock code or company name" id="txtSearch"/>
+        <div class="input-group-btn">
+          <button class="btn btn-primary" (click)="searchStock()">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+</div>
+<div *ngIf="stocksData.length > 0">
+  <table class="table table-fixed table-hover">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Ticker</th>
+              <th>Price</th>
+              <th>Risk</th>
+            </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor='let stock of stocksData; let i = index;'>
+            <td>{{stock.name}}</td>
+            <td>{{stock.ticker}}</td>
+            <td>${{stock.value}}</td>
+            <td>{{stock.risks}}</td>
+            <td><button class="btn btn-md btn-primary" (click)="buyStock(i)">Buy</button></td>
+            <td><button class="btn btn-md btn-primary" (click)="addToWatchlist(i)" [disabled]="isInWatchlist(stock)">Add to WatchList</button></td>
+          </tr>
+      </tbody>
+  </table>
+
+</div>

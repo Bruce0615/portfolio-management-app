@@ -1,0 +1,34 @@
+<div>
+  <div class="row">
+    <div class="col-md-12"><h1>Stock List</h1></div>
+  </div>
+  <div *ngIf="ownStocksData.length > 0">
+    <table class="table table-fixed table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Ticker</th>
+                <th>Price</th>
+                <th>Count</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th></th>
+              </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let stock of ownStocksData; let i = index;'>
+              <td>{{stock.name}}</td>
+              <td>{{stock.ticker}}</td>
+              <td>${{stock.price}}</td>
+              <td>{{stock.count}}</td>
+              <td>{{stock.date | date: 'dd-MMM-yyyy'}}</td>
+              <td>{{stock.date | date: 'shortTime'}}</td>
+              <td><button class="btn btn-md btn-primary" (click)="sellStock(i)">Sell</button></td>            
+            </tr>
+        </tbody>
+    </table>
+  </div>
+  <div *ngIf="ownStocksData.length == 0">
+    <p> no any stock, please buy stocks from stock search</p>
+  </div>
+</div>

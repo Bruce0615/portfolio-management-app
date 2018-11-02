@@ -1,0 +1,37 @@
+<div class="account-container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="col-md-12"><h1>Account Details</h1></div>
+        </div>
+        <div class="col-md-4"> 
+            <ul class="pagestats">
+                <li class='calendar'>
+                    <div class="header"><strong>Balance</strong></div>
+                    <div class="num-day">{{balance | currency:'USD':'symbol-narrow'}}</div>
+                </li>
+            </ul>       
+        </div>
+    </div>
+
+    <div class="row form-group">        
+        <div class="col-md-6">  
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
+                <input type="number" class="form-control" [(ngModel)]="depositAmount">
+            </div> 
+        </div>
+       <div class="col-md-2"><button class="btn btn-md btn-primary" style="width: 55%;" (click)="deposit()">Deposit</button></div>
+    </div>
+    <div class="row  form-group">
+        <div class="col-md-6">
+            <div  class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
+                <input type="number" class="form-control" [(ngModel)]="withdrawAmount">
+            </div>
+        </div>
+        <div class="col-md-2"><button class="btn btn-md btn-primary" (click)="withdraw()">Withdraw</button></div>
+    </div>
+
+</div>
+
+

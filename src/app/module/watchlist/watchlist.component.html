@@ -1,0 +1,29 @@
+<div>
+  <div class="row">
+    <div class="col-md-12"><h1>WatchList</h1></div>
+  </div>
+  <div *ngIf="watchlistData.length > 0">
+    <table class="table table-fixed table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Ticker</th>
+                <th>Price</th>
+                <th>Risk</th>
+              </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let watchlist of watchlistData; let i = index;'>
+              <td>{{watchlist.name}}</td>
+              <td>{{watchlist.ticker}}</td>
+              <td>${{watchlist.value}}</td>
+              <td>{{watchlist.risks}}</td>              
+              <td><button class="btn btn-md btn-primary" (click)="removeWatchlist(i)">Remove</button></td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+  <div *ngIf="watchlistData.length == 0">
+    <p>no any stock added to watchlist, please add from stock search</p>
+  </div>
+</div>
