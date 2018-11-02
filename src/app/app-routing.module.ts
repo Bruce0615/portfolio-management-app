@@ -35,7 +35,7 @@ const ROUTES: Routes = [
     RouterModule.forRoot(
       ROUTES,
       {
-        enableTracing: false
+        useHash: true
       }
     )
   ],
